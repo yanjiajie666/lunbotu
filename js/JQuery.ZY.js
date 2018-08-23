@@ -16,8 +16,8 @@
 		
 		//对象合并
 		//para1:Boolean 类型,是否深度合并对象,默认值是false(不支持该参数为false),若为true,
-//		且多个对象性的某个同名属性也是对象,则该"属性对象"的属性也将进行合并
-//para2,para3,............都要合并的对象
+		//且多个对象性的某个同名属性也是对象,则该"属性对象"的属性也将进行合并
+        //para2,para3,............都要合并的对象
 		$.extend(true,setting,options)
 		
 		//规定每张图片处于的位置和状态
@@ -35,7 +35,6 @@
 			lis.each(function(index,item){
 				var state= states[index]
 				$(item).css("z-index",state.zIndex).finish().animate(state,setting.delay).find("img").css("opacity",state.opac)
-				
 			})
 		}
 		move()
@@ -78,6 +77,8 @@
 		$(this).each(function(i,ele){
 			slide(ele,options)
 		})
+		//支持链式调用
+		return this
 	}
 })(jQuery)
 
