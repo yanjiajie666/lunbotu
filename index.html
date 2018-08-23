@@ -8,10 +8,10 @@
 	</head>
 	<body>
 		<div id="box">
-			<section class="prev">前一张</section>
-			<section class="next">下一张</section>
+			<section class="slide-prev">前一张</section>
+			<section class="slide-next">下一张</section>
 			
-			<ul>
+			<ul>			
 				<li><img src="images/1.jpg" alt="轮播图片" /></li>
 				<li><img src="images/2.jpg" alt="轮播图片" /></li>
 				<li><img src="images/3.jpg" alt="轮播图片" /></li>
@@ -22,6 +22,11 @@
 			</ul>
 		</div>
 		<script src="js/jquery-3.3.1.js"></script>
-		<script src="js/index.js"></script>
+		<script src="js/JQuery.ZY.js"></script>
+		<script type="text/javascript">
+			//将$禁用
+//			jQuery.noConflict()
+			$("#box").ZYSlide()
+		</script>
 	</body>
 </html>
